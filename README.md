@@ -1,30 +1,75 @@
-# DRC Mobility Tracking Data Analysis & Validation Script
+# DRC Mobility Tracking Data Validation & Automated Analysis
 
-## 🐍 Python
+A Python workflow for validating and analysing humanitarian mobility-tracking data from the Democratic Republic of the Congo.
 
-This repository contains a Python script used by the **AKO team** to analyze and validate **mobility tracking data** from the **DRC mission**.  
-It supports verification of field-level analysis conducted by the data team and prepares validated datasets for integration into the **Mobility Tracking reporting product**.  
+This project was developed because humanitarian data in the field can change very quickly as new information is received and records are corrected or updated. As a result, the UN's Analytics Knowledge and Output team needed a fast, verifiable and repeatable process for reporting.
 
-The script is particularly valuable in the **unstable context of the DRC**, where humanitarian actors require **timely and reliable data** to inform responses to the needs of displaced and/or returning populations.  
+The workflow combines two linked stages:
 
----
+1. Validating the cleaned source data before analysis
+2. Automating the main analytical process used for reporting
 
-## ✨ Features
-- Cleaning and validation of raw mobility tracking datasets from field teams  
-- Automated checks to ensure consistency and quality of analysis  
-- Preparation of validated datasets for reporting and dissemination  
-- Support for rapid humanitarian response through verified information  
+## Project Context
 
----
+The data originated from field-level mobility tracking activities undertaken in the DRC's complex humanitarian context.
 
-## 📦 Requirements
-- Python 3.8+  
-- [pandas](https://pandas.pydata.org/)  
-- [numpy](https://numpy.org/)  
-- [matplotlib.pyplot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html)  
-- [plotly.graph_objects](https://plotly.com/python/graph-objects/)  
+Because source datasets could change between reporting cycles, the first priority was to establish a repeatable validation process that could verify the integrity of the analytical input.
 
-Install dependencies with:
+Once the dataset had passed validation, the second stage automated the main calculations, transformations and outputs required for reporting.
 
-```bash
-pip install -r requirements.txt
+The resulting workflow was designed to make the analytical process more consistent, reproducible and easier to rerun when updated data became available.
+
+## Workflow
+
+**Field-cleaned data → validation checks → exception review → validated dataset → automated analysis → reporting outputs**
+
+## What the Project Does
+
+### 1. Validate Incoming Data
+
+The validation stage checks the cleaned dataset before any automated analysis is performed.
+
+The workflow is used to:
+
+- Identify missing or unexpected values
+- Test logical consistency between variables
+- Verify analytical and aggregation outputs
+- Flag records or results requiring investigation
+- Establish a validated dataset for downstream reporting
+
+### 2. Investigate Exceptions
+
+Records or outputs that fail validation checks can be reviewed before the main analysis is rerun. This creates a clear distinction between data that has passed validation and data that still requires investigation and/or cleaning.
+
+### 3. Automate the Analytical Workflow
+
+Once the data has been verified, the second stage automates the main analysis used for reporting.
+
+This includes:
+
+- Applying repeatable transformations
+- Reproducing core calculations programmatically
+- Generating consistent analytical outputs
+- Reducing reliance on repeated manual processing
+- Allowing the workflow to be rerun efficiently when updated field data becomes available
+
+## Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+
+## Project Structure
+
+```text
+drc-mobility-tracking-automation-validation-analysis/
+├── README.md
+├── src/
+│   ├── validation.py
+│   └── analysis.py
+├── images/
+├── sample_data/
+├── requirements.txt
+└── .gitignore
+```
