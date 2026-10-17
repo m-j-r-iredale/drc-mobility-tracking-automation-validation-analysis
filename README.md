@@ -23,6 +23,8 @@ The resulting workflow was designed to make the analytical process more consiste
 
 **Field-cleaned data → validation checks → exception review → validated dataset → automated analysis → reporting outputs**
 
+![Workflow overview](images/workflow_overview.png)
+
 ## What the Project Does
 
 ### 1. Validate Incoming Data
@@ -36,6 +38,8 @@ The workflow is used to:
 - Verify analytical and aggregation outputs
 - Flag records or results requiring investigation
 - Establish a validated dataset for downstream reporting
+
+![Validation logic](images/validation%20logic.png)
 
 ### 2. Investigate Exceptions
 
@@ -52,6 +56,8 @@ This includes:
 - Generating consistent analytical outputs
 - Reducing reliance on repeated manual processing
 - Allowing the workflow to be rerun efficiently when updated field data becomes available
+
+![Automated reporting outputs](images/automated_outputs.png)
 
 ## Technologies
 
