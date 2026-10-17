@@ -72,8 +72,7 @@ This includes:
 drc-mobility-tracking-automation-validation-analysis/
 ├── README.md
 ├── src/
-│   ├── validation.py
-│   └── analysis.py
+│   └── mobility_tracking_analysis.py
 ├── images/
 ├── sample_data/
 ├── requirements.txt
